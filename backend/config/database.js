@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const connectDatabase = async () => {
     try {
         const conn = await mongoose.connect(process.env.DB_LOCAL_URI, {
-            dbName: 'agileprojectv1', // Set the database name
+            dbName: 'agileprojectv3', // Set the database name
             useNewUrlParser: true,
             useUnifiedTopology: true,
            
