@@ -2,7 +2,6 @@ const express=require('express')
 const router=express.Router()
 const{deleteUser,updateUser,getUserDetails,allUsers,updateProfile,updatePassword,getUserProfile,forgotPassword,logout,registerUser,loginUser,resetPassword}=require('../controllers/authController')
 const { isAuthenticatedUser, authorizeRoles } = require('../middlewares/auth')
-
 router.route('/register').post(registerUser)
 router.route('/login').post(loginUser)
 router.route('/password/forgot').post(forgotPassword)
@@ -16,5 +15,4 @@ router.route('/admin/user/:id')
     .put(isAuthenticatedUser, authorizeRoles('admin'), updateUser)
     .delete(isAuthenticatedUser, authorizeRoles('admin'), deleteUser)
 router.route('/logout').get(logout)
-
 module.exports=router
