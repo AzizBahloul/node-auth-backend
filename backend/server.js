@@ -2,7 +2,7 @@ const app = require('./app');
 const cloudinary = require('cloudinary').v2; // Updated to v2
 const connectDatabase = require('./config/database');
 
-// Handling the uncaught exceptions
+// Handling uncaught exceptions
 process.on('uncaughtException', err => {
     console.log(`ERROR: ${err.message}`);
     console.log('Shutting down the server due to uncaught exception');
@@ -29,7 +29,7 @@ const server = app.listen(process.env.PORT, () => {
 });
 
 // Handle unhandled Promise rejections
-process.on('unhandledRejection', (err) => {
+process.on('unhandledRejection', err => {
     console.log(`ERROR: ${err.message}`);
     console.log('Shutting down the server due to unhandled Promise Rejection');
     server.close(() => {

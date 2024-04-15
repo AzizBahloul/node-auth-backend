@@ -3,7 +3,7 @@ import assertString from './util/assertString';
 var upperCaseRegex = /^[A-Z]$/;
 var lowerCaseRegex = /^[a-z]$/;
 var numberRegex = /^[0-9]$/;
-var symbolRegex = /^[-#!$@£%^&*()_+|~=`{}\[\]:";'<>?,.\/ ]$/;
+var symbolRegex = /^[-#!$@%^&*()_+|~=`{}\[\]:";'<>?,.\/ ]$/;
 var defaultOptions = {
   minLength: 8,
   minLowercase: 1,

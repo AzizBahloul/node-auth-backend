@@ -18,9 +18,7 @@ function isBIC(str) {
   (0, _assertString.default)(str); // toUpperCase() should be removed when a new major version goes out that changes
   // the regex to [A-Z] (per the spec).
 
-  var countryCode = str.slice(4, 6).toUpperCase();
-
-  if (!_isISO31661Alpha.CountryCodes.has(countryCode) && countryCode !== 'XK') {
+  if (!_isISO31661Alpha.CountryCodes.has(str.slice(4, 6).toUpperCase())) {
     return false;
   }
 

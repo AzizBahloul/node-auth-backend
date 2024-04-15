@@ -6,5 +6,5 @@ export default function matches(str, pattern, modifiers) {
     pattern = new RegExp(pattern, modifiers);
   }
 
-  return !!str.match(pattern);
+  return pattern.test(str);
 }
